@@ -2,8 +2,8 @@
 
 public class Warehouse {
 
-    private double capacity;
-    private double balance;
+    protected double capacity;
+    protected double balance;
 
     public Warehouse(double capacity) {
         if (capacity > 0.0) {
@@ -18,7 +18,7 @@ public class Warehouse {
     public double getBalance() {
         return this.balance;
     }
-
+    
     public double getCapacity() {
         return this.capacity;
     }

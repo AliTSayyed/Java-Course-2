@@ -1,5 +1,5 @@
 
-
+import java.util.Map;
 public class MainProgram {
 
     public static void main(String[] args) {
@@ -9,4 +9,7 @@ public class MainProgram {
 
     // Implement here a method returnSize, which takes a Map-object as a parameter 
     // and returns the size of the map object
+    public static <T>int returnSize(Map<T, T> map){
+        return map.size();
+    }    
 }
