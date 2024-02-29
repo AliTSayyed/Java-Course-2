@@ -9,6 +9,18 @@ public class Person {
 
         this.name = name;
         this.age = age;
+        
+        if (this.name == null || this.name.isEmpty()){
+            throw new IllegalArgumentException("Name does not exist");
+        }
+        
+        if (this.name.length() > 40){
+            throw new IllegalArgumentException("Name is too long");
+        }
+        
+        if (this.age < 0 || this.age > 120){
+            throw new IllegalArgumentException("Age not allowed");
+        }
     }
 
     public String getName() {
