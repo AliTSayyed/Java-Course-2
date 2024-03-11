@@ -15,17 +15,50 @@ public class MagicSquare {
         this.square = new int[size][size];
     }
 
+    public void setSquare(int[][] square) {
+        this.square = square;
+    }
+
     // implement these three methods
     public ArrayList<Integer> sumsOfRows() {
-        return new ArrayList<>();
+        ArrayList<Integer> sumOfRows = new ArrayList<>();
+        for (int i = 0; i < this.square.length; i++) {
+            int rowSum = 0;
+            for (int j = 0; j < this.square[i].length; j++) {
+                rowSum = rowSum + this.square[i][j];
+            }
+            sumOfRows.add(rowSum);
+        }
+        return sumOfRows;
     }
 
     public ArrayList<Integer> sumsOfColumns() {
-        return new ArrayList<>();
+        ArrayList<Integer> sumOfColumns = new ArrayList<>();
+        for (int i = 0; i < this.square[0].length; i++) {
+            int columnSum = 0;
+            for (int j = 0; j < this.square.length; j++) {
+                columnSum = columnSum + this.square[j][i];
+            }
+            sumOfColumns.add(columnSum);
+        }
+        return sumOfColumns;
     }
 
     public ArrayList<Integer> sumsOfDiagonals() {
-        return new ArrayList<>();
+        ArrayList<Integer> sumsOfDiagonals = new ArrayList<>();
+
+        int primaryDiagonalSum = 0;
+        int secondaryDiagonalSum = 0;
+
+        for (int i = 0; i < this.square.length; i++) {
+            primaryDiagonalSum += this.square[i][i];
+            secondaryDiagonalSum += this.square[i][this.square.length - 1 - i];
+        }
+
+        sumsOfDiagonals.add(primaryDiagonalSum);
+        sumsOfDiagonals.add(secondaryDiagonalSum);
+
+        return sumsOfDiagonals;
     }
 
     // ready-made helper methods -- don't touch these
