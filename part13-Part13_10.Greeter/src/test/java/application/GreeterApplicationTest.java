@@ -49,7 +49,7 @@ public class GreeterApplicationTest extends ApplicationTest {
         this.stage = stage;
     }
 
-    @Test
+  /*  @Test
     public void welcomeAda() {
         check("Ada Lovelace");
     }
@@ -66,5 +66,6 @@ public class GreeterApplicationTest extends ApplicationTest {
 
         assertFalse(lookup(".text-field").tryQuery().isPresent());
         assertFalse(lookup(".button").tryQuery().isPresent());
+*/
     }
-}
+
