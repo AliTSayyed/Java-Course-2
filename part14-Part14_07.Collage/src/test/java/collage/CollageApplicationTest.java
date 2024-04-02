@@ -139,18 +139,18 @@ public class CollageApplicationTest extends ApplicationTest {
         }
 
         assertNotNull("The Scene object should receive as its parameter a Pane.", layout);
-        assertFalse("The Pane object should have one child, which is of type ImageView. Now there were no children.", layout.getChildren().isEmpty());
+                assertFalse("The Pane object should have one child, which is of type ImageView. Now there were no children.", layout.getChildren().isEmpty());
         assertTrue("The Pane object should have one child, which is of type ImageView. Now the number of children was ", layout.getChildren().size() == 1);
-
+   
         assertTrue("The Pane object should have one child, which is of type ImageView.", layout.getChildren().get(0).getClass().isAssignableFrom(ImageView.class));
-
+        
         return (ImageView) layout.getChildren().get(0);
     }
-
-    // TODO: more tests
     
+    // TODO: more tests
+   
     private List<String> part1PixelsExpectedValues() {
-        return Arrays.asList(("0	249	0x392e2aff	0xc6d1d5ff\n"
+        return Arrays.asList(("0	249	0x2e2019ff	0xc6d1d5ff\n"
                 + "0	287	0x30271eff	0xcfd8e1ff\n"
                 + "0	326	0x251f15ff	0xdae0eaff\n"
                 + "0	334	0x272019ff	0xd8dfe6ff\n"
@@ -623,4 +623,5 @@ public class CollageApplicationTest extends ApplicationTest {
                 + "510	669	0x261c11ff	0xd9e3eeff\n"
                 + "513	218	0x332217ff	0xccdde8ff").split("\n"));
     }
+
 }

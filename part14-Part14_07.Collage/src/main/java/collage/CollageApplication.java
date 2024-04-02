@@ -39,10 +39,16 @@ public class CollageApplication extends Application {
                 double green = color.getGreen();
                 double blue = color.getBlue();
                 double opacity = color.getOpacity();
+                red = 1.0 - red; //negatize colors
+                green = 1.0 - green;
+                blue = 1.0 - blue;
 
                 Color newColor = new Color(red, green, blue, opacity);
-
-                imageWriter.setColor(xCoordinate, yCoordinate, newColor);
+                
+                imageWriter.setColor(xCoordinate / 2, yCoordinate / 2, newColor); // write upper left copy
+                imageWriter.setColor((xCoordinate / 2) + (width / 2), yCoordinate / 2, newColor); //write upper right copy
+                imageWriter.setColor(xCoordinate / 2, (yCoordinate / 2) + (height / 2), newColor); //write lower left copy
+                imageWriter.setColor((xCoordinate / 2) + (width / 2), (yCoordinate / 2) + (height / 2), newColor); //write lower right copy
 
                 xCoordinate++;
             }
@@ -51,7 +57,6 @@ public class CollageApplication extends Application {
         }
 
         ImageView image = new ImageView(targetImage);
-
         Pane pane = new Pane();
         pane.getChildren().add(image);
 

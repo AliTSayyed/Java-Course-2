@@ -1,5 +1,6 @@
 package hurraa;
 
+//import javafx.scene.media.AudioClip; this was not importting when it should 
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -14,7 +15,9 @@ public class HurraaSovellus extends Application {
 
         Button nappi = new Button("Hurraa!");
         pane.setCenter(nappi);
-
+        
+        //AudioClip hurraa = new AudioClip("file:Applause-Yannick_Lemieux.wav");
+        //nappi.setOnAction((event) -> hurraa.play());
 
         Scene scene = new Scene(pane, 600, 400);
 

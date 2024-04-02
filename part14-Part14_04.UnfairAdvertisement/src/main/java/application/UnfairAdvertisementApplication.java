@@ -14,8 +14,8 @@ public class UnfairAdvertisementApplication extends Application {
     public void start(Stage window) {
         CategoryAxis xAxis = new CategoryAxis();
         NumberAxis yAxis = new NumberAxis(77.0, 77.5, 0.1);
-        yAxis.setTickLabelsVisible(false);
-        yAxis.setLabel("Faster and Better!");
+        yAxis.setTickLabelsVisible(true);
+        yAxis.setLabel("Speeds (m/s)");
 
         BarChart<String, Number> barChart = new BarChart<>(xAxis, yAxis);
 
